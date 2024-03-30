@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" a href="https://i.ibb.co/3vzy3cZ/Screenshot-2024-03-30-123730.png"></a>
+  </head>
+  <body >
+    <div class="container">
+      <h1  class="title" style="color:cornflowerblue;font-size:300%;" >Job Application Form</h1>
+      <form id="jobApplicationForm">
+        <div class="form-group">
+          <label for="name"><i class="fas fa-user"></i> Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          <span id="nameError" class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          <span id="emailError" class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone"><i class="fas fa-phone"></i> Phone Number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required oninput="formatPhoneNumber(this)" required />
+          <span id="phoneError" class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="address"><i class="fas fa-map-marker-alt"></i> Address:</label>
+          <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+          <span id="addressError" class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="resume"><i class="fas fa-file-upload"></i> Resume:</label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.docx" required />
+          <span id="resumeError" class="error" aria-live="polite"></span>
+        </div>
+
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+        <a href="mailto:contact@neuralgo.ai">Queries:EMAIL ME</a>
+      </form>
+    </div>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
